@@ -2,7 +2,7 @@
 
 2 - Defina uma classe Celular com atributos como marca, modelo, e capacidadeBateria. Adicione métodos para ligar e desligar o celular.
 
-3 - Implemente uma classe Pessoa com atributos nome, idade, e altura. Adicione um método que imprime uma apresentação da pessoa.
+3 - Implemente uma classe exercicio03 com atributos nome, idade, e altura. Adicione um método que imprime uma apresentação da pessoa.
 
 4 - Crie uma classe ContaBancaria com atributos como numeroConta e saldo. Adicione métodos para depositar e sacar dinheiro.
 
