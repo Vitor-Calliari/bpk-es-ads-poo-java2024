@@ -1,36 +1,37 @@
 package Exercicio01;
 
-public class Carro {
-    private String modelo;
+class Carro {
     private Motor motor;
+    private String modelo;
 
     public Carro(String modelo, Motor motor) {
         this.modelo = modelo;
         this.motor = motor;
     }
 
-    public String getModelo() {
-        return modelo;
+    public void ligarMotor() {
+        motor.ligar();
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void desligarMotor() {
+        motor.desligar();
     }
 
-    public Motor getMotor() {
-        return motor;
-    }
-
-    public void setMotor(Motor motor) {
-        this.motor = motor;
-    }
-
-    public void ligarCarro(){
+    public void acelerar(int incremento) {
         if (motor.isLigado()) {
-            System.out.println("O carro " + modelo + "já está ligado");
+            motor.incrementarRpm(incremento);
+            System.out.println("Acelerando. RPM atual: " + motor.getRpm());
         } else {
-            System.out.println(("Ligando o carro " + modelo));
-            motor.ligar();
+            System.out.println("Não é possível acelerar com o motor desligado.");
+        }
+    }
+
+    public void desacelerar(int decremento) {
+        if (motor.isLigado()) {
+            motor.decrementarRpm(decremento);
+            System.out.println("Desacelerando. RPM atual: " + motor.getRpm());
+        } else {
+            System.out.println("Não é possível desacelerar com o motor desligado.");
         }
     }
 }
